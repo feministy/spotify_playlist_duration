@@ -4,10 +4,9 @@ Spotify doesn't have a feature to calculate the length of a playlist. It's kind 
 
 **Requirements**
 
- - Spotify API key
+ - Spotify API key *pretty sure this requires a premium account*
  - Spotify username
  - Spotify password
- - Pretty sure those both require a premium account
  - [libspotify](https://developer.spotify.com/technologies/libspotify/) (installed by [Hallon](https://github.com/Burgestrand/Hallon) if possible)
  - Ruby Gems
  - Ruby 1.9.3 or higher (probably will work with 1.8.7)
