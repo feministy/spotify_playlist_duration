@@ -23,5 +23,5 @@ if total_time.length > 0
   puts "#{playlist.name} is currently #{hours_with_minutes.round(2)} long (HH.MM)"
 else
   # Sad trombone
-  puts "Looks like your API called for some reason. Try again."
+  puts "Looks like your API call failed for some reason. Try again."
 end
