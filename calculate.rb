@@ -19,8 +19,8 @@ if total_time.length > 0
   # Sometimes Spotify likes to be sassy and return 0 for duration
   p total_time
   seconds = total_time.inject(:+)
-  hours_with_minutes = ((seconds / 60.00) / 60.00).round(2)
-  puts "#{playlist.name} is currently #{hours_with_minutes.round(2)} long (HH.MM)"
+  minutes = (seconds / 60.00).round(2)
+  puts "#{playlist.name} is currently #{minutes} minutes long"
 else
   # Sad trombone
   puts "Looks like your API call failed for some reason. Try again."
