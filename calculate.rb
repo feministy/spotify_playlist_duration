@@ -9,14 +9,13 @@ playlist = Hallon::Playlist.new(ENV["SPOTIFY_LIST"])
 
 # Grab the total time of each track on the playlist
 # duration is a Rational number
-total_time = playlist.tracks.map(&:duration)
+tracks = playlist.tracks.map(&:duration)
 total_time = tracks.map { |t| t.to_i }
 
-
 # The lamest error handling in the world
-if total_time.length > 0
-  # Check the result of total_time and make sure nothing returned 0
-  # Sometimes Spotify likes to be sassy and return 0 for duration
+# Sometimes Spotify likes to be sassy and return 0 for duration
+# So we don't want to add that up because it would be inaccurate
+if total_time.length > 0 && !total_time.include?(0)
   p total_time
   seconds = total_time.inject(:+)
   minutes = (seconds / 60.00).round(2)
