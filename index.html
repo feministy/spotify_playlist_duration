@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Spotify, how long is my playlist? by feministy</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/feministy/spotify_playlist_duration">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/feministy/spotify_playlist_duration/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/feministy/spotify_playlist_duration/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Spotify, how long is my playlist?</h1>
+          <p>Calculates the duration of a Spotify playlist.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/feministy">feministy</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>
+<a name="so-you-want-to-know-how-long-your-spotify-playlist-is" class="anchor" href="#so-you-want-to-know-how-long-your-spotify-playlist-is"><span class="octicon octicon-link"></span></a>So you want to know how long your Spotify playlist is?</h3>
+
+<p>Spotify doesn't have a feature to calculate the length of a playlist. It's kind of annoying. Calculate the length of a Spotify playlist with this script.</p>
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+<li>Spotify API key <em>pretty sure this requires a premium account</em>
+</li>
+<li>Spotify username</li>
+<li>Spotify password</li>
+<li>
+<a href="https://developer.spotify.com/technologies/libspotify/">libspotify</a> (installed by <a href="https://github.com/Burgestrand/Hallon">Hallon</a> if possible)</li>
+<li>Ruby Gems</li>
+<li>Ruby 1.9.3 or higher (probably will work with 1.8.7)</li>
+</ul><hr><h4>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h4>
+
+<ol>
+<li><code>$ git clone https://github.com/feministy/spotify_playlist_duration.git</code></li>
+<li>Get a Spotify API key from <a href="https://developer.spotify.com/technologies/libspotify/keys/">here</a>
+</li>
+<li>Download the binary file and save it in the same directory as this repo</li>
+<li><code>$ export SPOTIFY_USERNAME='your_username'</code></li>
+<li><code>$ export SPOTIFY_PASSWORD='passwordy'</code></li>
+<li>Grab the Spotify URI of the playlist you want to find the length of</li>
+<li><code>$ export SPOTIFY_LIST='spotify_uri'</code></li>
+<li><code>$ bundle install</code></li>
+<li><code>$ bundle exec ruby calculate.rb</code></li>
+</ol><hr><p><strong>Note</strong> Sometimes the Spotify API is a little finnicky and it will return nil. Wait a few seconds/minutes and try again.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
